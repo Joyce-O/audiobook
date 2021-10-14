@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hello!</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="module" src="websocket.js"></script>
+</head>
+
+<body>
+    <h2>Record</h2>
+    <p id="status">Not connected</p>
+    <p>
+        <button role="start" id=record></button>
+        <button role="stop" id=stopRecord disabled>Stop</button>
+    </p>
+    <div class="actions mt-3">
+        <button class="btn btn-success rounded-pill" id="saveButton">Submit</button>
+        <button class="btn btn-danger rounded-pill" id="discardButton">Discard</button>
+      </div>
+
+    <div class="recorded-audio-container mt-5 d-none flex-column justify-content-center align-items-center"
+  id="recordedAudioContainer">
+</div>
+<div id="chatdiv">
+    <ul id="chatList">
+    </ul>
+
+</div>
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
