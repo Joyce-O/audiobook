@@ -23,6 +23,7 @@ This uses [google-speech-to-text](https://cloud.google.com/speech-to-text/docs/s
 
 Once the dependencies are installed, you can run  `npm start` to start the application. This should start socket server
 
+![Imgur](https://imgur.com/5pOChPH)
 ---
 
 ## License

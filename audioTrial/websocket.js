@@ -13,7 +13,7 @@ function onLoad() {
  function onOpen(evt) {
     const state = document.getElementById("status");
     state.className = "success";
-    state.innerHTML = "Connected to server";
+    state.innerHTML = "Online";
  }
       
  function onClose(evt) {
