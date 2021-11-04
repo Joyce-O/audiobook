@@ -7,14 +7,10 @@ async function convert(audioContent) {
 // Creates a client
 const client = new speech.SpeechClient();
 
-const encoding = 'WEBM_OPUS';
-
-const languageCode = 'en-US';
-
 const config = {
-  encoding: encoding,
+  encoding: 'WEBM_OPUS',
 //   sampleRateHertz: sampleRateHertz,
-  languageCode: languageCode,
+  languageCode: 'en-US',
 };
 const audio = {
   content: audioContent,

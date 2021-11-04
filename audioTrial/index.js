@@ -34,6 +34,7 @@ if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
 navigator.mediaDevices
   .getUserMedia({ audio: true })
   .then((stream) => {
+    console.log('type', MediaRecorder.isTypeSupported())
     handlerFunction(stream);
   })
   .catch((err) => console.log("The following gUM error occured: " + err));
@@ -49,16 +50,6 @@ function handlerFunction(stream) {
   };
 }
 
-const getBase64 = () => {
-  let base64data;
-  const reader = new window.FileReader();
-  reader.readAsDataURL(audioBlob);
-  reader.onloadend = function () {
-   base64data = reader.result;
-  }
-  console.log('mom ', base64data);
-  return base64data; 
-}
 
 async function sendData() {
   let base64data;
@@ -66,9 +57,8 @@ async function sendData() {
   await reader.readAsDataURL(audioBlob);
   reader.onloadend = await function () {
    base64data = reader.result;
-  //  base64data = base64data.split(';base64,')[1];
+
   console.log('base64data ', base64data)
-  console.log(audioBlob instanceof Blob)
    addMessage(audioBlob)
 
   }
