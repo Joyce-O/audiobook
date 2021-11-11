@@ -104,3 +104,7 @@ dist
 .tern-port
 notesNresources
 wescoketspeechtext-7902a5056a84.json
+
+npm-debug.log
+.DS_Store
+/*.env
